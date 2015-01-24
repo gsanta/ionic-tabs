@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.ionicapp129561" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>ionicApp</name>
+<widget id="com.ionicframework.ionicapp129561" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Mr. Klausz</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Its a small mobile app for SEDCup
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="hi@mrklauszteam.com" href="http://mrklauszteam.com/">
+      Mr. Klausz team
     </author>
   <content src="index.html"/>
   <access origin="*"/>
