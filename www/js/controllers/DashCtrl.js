@@ -1,24 +1,12 @@
 var DashCtrl = function($scope, $http) {
 
-	var todoList = [ 
-	  	{
-	  		title: "first todo",
-	  		content: "first todo content",
-	  		date: new Date()
-	  	},
-	  	{
-	  		title: "second todo",
-	  		content: "second todo content",
-	  		date: new Date()
-	  	}
-	]
-
 	// Simple POST request example (passing data) :
-	$http.post('https://result-estimator.herokuapp.com/sedcup/add', {msg:todoList}).
+	$http.get('https://result-estimator.herokuapp.com/todos/get').
 	  success(function(data, status, headers, config) {
+	  	console.log(data)
 	    // this callback will be called asynchronously
 	    // when the response is available
-	    $scope.todos = data.body.msg;
+	    $scope.todos = data.data
 	    //$scope.todos = 
 	 }).
 	 error(function(data, status, headers, config) {
