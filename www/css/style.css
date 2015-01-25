@@ -3,3 +3,7 @@
 .save-button-container {
 	margin: 15px; 
 }
+
+.delete-todo {
+	float: right;
+}

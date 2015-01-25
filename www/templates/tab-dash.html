@@ -2,7 +2,9 @@
   <ion-content class="padding">
 
     <div class="list card" ng-repeat="(key, value) in todos">
-      <div class="item item-divider">{{value.title}} | {{value.date | date:'medium'}}</div>
+      <div class="item item-divider">{{value.title}} | {{value.date | date:'medium'}}
+        <i class="icon ion-trash-a delete-todo" ng-click="deleteTodo(value.todos_id)"></i>
+      </div>
       <div class="item item-body">
         <div>
           {{value.content}}
