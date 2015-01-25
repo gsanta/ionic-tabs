@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.ionicapp129561" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Mr. Klausz</name>
+  <name>Mr. Klausz Todo</name>
   <description>
         Its a small mobile app for SEDCup
     </description>
