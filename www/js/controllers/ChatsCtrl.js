@@ -8,7 +8,7 @@ var ChatsCtrl = function($scope, $http, $location) {
 
 	  navigator.geolocation.getCurrentPosition(
 	      function(position) {
-	          	console.log(position.coords.latitude + ',' + position.coords.longitude);
+	          	console.log("new"+position.coords.latitude + ',' + position.coords.longitude);
 	            $scope.todo.latitude = position.coords.latitude;
 	            $scope.todo.longitude = position.coords.longitude;
 
@@ -23,7 +23,7 @@ var ChatsCtrl = function($scope, $http, $location) {
 	      },
 	      function() {
 	          alert('Error getting location');
-	      });
+	      }, {timeout: 10000, enableHighAccuracy: true});
   	
   }
 }
