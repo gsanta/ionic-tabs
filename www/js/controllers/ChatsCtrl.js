@@ -23,7 +23,7 @@ var ChatsCtrl = function($scope, $http, $location) {
 	      },
 	      function() {
 	          alert('Error getting location');
-	      }, {timeout: 10000, enableHighAccuracy: true});
+	      }, {timeout: 15000, enableHighAccuracy: false});
   	
   }
 }
