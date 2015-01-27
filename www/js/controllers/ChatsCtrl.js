@@ -1,5 +1,5 @@
 
-var ChatsCtrl = function($scope, $http, $location) {
+var ChatsCtrl = function($scope, $http, $location, $window) {
   
   $scope.todo = {}
 
@@ -14,7 +14,8 @@ var ChatsCtrl = function($scope, $http, $location) {
 
 	          	$http.post('https://result-estimator.herokuapp.com/todos/add', $scope.todo).
 				  success(function(data, status, headers, config) {
-				    $location.path('/')
+				    $location.path('/');
+						$window.location.reload();
 				 }).
 				 error(function(data, status, headers, config) {
 				    // called asynchronously if an error occurs

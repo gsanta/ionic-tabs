@@ -7,3 +7,9 @@
 .delete-todo {
 	float: right;
 }
+
+.address-footer {
+	margin-top: 15px;
+	font-size: 8pt;
+	float: right;
+}
