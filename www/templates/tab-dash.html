@@ -1,6 +1,6 @@
 <ion-view view-title="Todos">
   <ion-content class="padding">
-    <button class="event received button button-full button-positive" onclick="window.plugin.notification.local.add({ message: 'Great app!' });">Push a noti</button>
+    <button class="event received button button-full button-positive" onclick="window.testLocalNoti()">Push a noti</button>
     <div class="list card" ng-repeat="(key, value) in todos">
       <div class="item item-divider">{{value.title}} | {{value.date | date:'medium'}}
         <i class="icon ion-trash-a delete-todo" ng-click="deleteTodo(value.todos_id)"></i>
