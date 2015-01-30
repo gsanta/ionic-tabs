@@ -1,7 +1,9 @@
 
 var FriendsCtrl = function($scope) {
 
-    $scope.data = {};
+    $scope.data = {
+        radius: 0
+    };
 
     $scope.setMission = function(rad) {
         if(rad===undefined){
