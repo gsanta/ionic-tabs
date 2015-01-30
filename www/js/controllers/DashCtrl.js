@@ -1,11 +1,11 @@
 var DashCtrl = function($scope, $http, $location, $window, $timeout) {
 	var opts = {
-  lines: 12, // The number of lines to draw
+  lines: 1, // The number of lines to draw
   angle: 0.0, // The length of each line
   lineWidth: 0.44, // The line thickness
   pointer: {
-    length: 0.9, // The radius of the inner circle
-    strokeWidth: 0.035, // The rotation offset
+    length: 0.7, // The radius of the inner circle
+    strokeWidth: 0.020, // The rotation offset
     color: '#000000' // Fill color
   },
   limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
@@ -18,6 +18,7 @@ var target = document.getElementById('foo'); // your canvas element
 
 var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
 gauge.maxValue = 100; // set max gauge value
+gauge.setTextField(document.getElementById('preview-textfield'));
 gauge.animationSpeed = 32; // set animation speed (32 is default value)
 gauge.set(0); // set actual value
 
@@ -61,7 +62,7 @@ var inn = 0.0;
 
 var countUp = function() {
 	//console.log(rgbToHex(getColorForPercentage(1-inn)));
-	if (inn >= 1) {
+	if (inn > 1) {
 			inn = 0;
 		}
 	gauge.options.colorStart = rgbToHex(getColorForPercentage(1-inn));
