@@ -4,6 +4,8 @@ var AccountCtrl = function($scope) {
     enableFriends: true
   };
 
+  $scope.marker = null;
+
     var mapProp = {
 	    center:new google.maps.LatLng(51.508742,-0.120850),
 	    zoom:5,
@@ -13,17 +15,26 @@ var AccountCtrl = function($scope) {
   	$scope.initMap = function() {
 
 	    $scope.map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-		google.maps.event.addListener($scope.map, 'click', function(event) {
+		google.maps.event.addListener($scope.map, 'mousedown', function(event) {
 		    console.log(event.latLng);
-		      var marker = new google.maps.Marker({
+		    if($scope.marker == null) {
+		      $scope.marker = new google.maps.Marker({
 			      position: event.latLng,
 			      map: $scope.map,
-			      title: 'Hello World!'
+			      title: 'Hello World!',
+			      draggable:true,
 			  });
-		});
 
-		$scope.destLat = event.latLng.D 
-		$scope.destLon = event.latLng.k 
+			  	google.maps.event.addListener($scope.marker, 'dragend', function() 
+				{
+				    console.log({
+				    	lat: $scope.marker.getPosition().lat(),
+				    	lon: $scope.marker.getPosition().lng()
+				    })
+				});
+
+		  	}
+		})
   };
 }
 
