@@ -86,12 +86,12 @@ var getColorForPercentage = function(pct) {
                 var currentdif = getdifcoord(current, goal);
                 var koz = fulldiff-currentdif;
 
-                console.log(koz/fulldiff);
+                //console.log(koz/fulldiff);
                 window.tavolsag = koz/fulldiff;
 
             },
             function() {
-                alert('Error getting location');
+                //alert('Error getting location');
             }, {timeout: 15000, enableHighAccuracy: false});
 
     }
@@ -140,18 +140,17 @@ var countUp = function() {
 	gauge.options.colorStart = rgbToHex(getColorForPercentage(1-percent));
 	gauge.options.colorStop = rgbToHex(getColorForPercentage(1-percent));
 		gauge.set(percent*100);
-		
-        $scope.timeInMs+= 500;
-        $timeout(countUp, 100);
+
+        $timeout(countUp, 1000);
     }
 
-$timeout(countUp, 100);
+$timeout(countUp, 1000);
 	// Simple POST request example (passing data) :
 
 	var getTodos = function() {
 		$http.get('https://result-estimator.herokuapp.com/todos/get').
 		  success(function(data, status, headers, config) {
-		  	console.log(data)
+		  	//console.log(data)
 		    $scope.todos = data.data
 				//http://maps.googleapis.com/maps/api/geocode/json?latlng=48.0,22.03553838&sensor=true
 				angular.forEach($scope.todos, function(todo){
