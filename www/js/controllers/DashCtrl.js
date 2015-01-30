@@ -141,6 +141,7 @@ var countUp = function() {
 	gauge.options.colorStop = rgbToHex(getColorForPercentage(1-percent));
 		gauge.set(percent*100);
 
+        $scope.timeInMs+= 500;
         $timeout(countUp, 1000);
     }
 
