@@ -1,10 +1,31 @@
-<ion-view view-title="Friends">
+<ion-view view-title="Custom Missions">
   <ion-content>
     <ion-list>
-      <ion-item class="item-avatar" ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
-        <img ng-src="{{friend.face}}">
-        <h2>{{friend.name}}</h2>
+      <ion-item class="item-avatar" type="item-text-wrap" ng-click="setMission(50)">
+          <img src="../img/easy.png">
+        <h2>Easy</h2>
+          Radius is 50m
       </ion-item>
+        <ion-item class="item-avatar" type="item-text-wrap"  ng-click="setMission(100)">
+            <img src="../img/medium.png">
+            <h2>Medium</h2>
+            Radius is 100m
+        </ion-item>
+        <ion-item class="item-avatar" type="item-text-wrap" ng-click="setMission(200)">
+            <img src="../img/hard.png">
+            <h2>Hard</h2>
+            Radius is 200m
+        </ion-item>
+
+        <label class="item item-input item-floating-label">
+            <span class="input-label">Radius</span>
+            <input ng-model="data.radius" type="text" placeholder="Radius (in meter)">
+        </label>
+
+        <button class="button button-full button-positive" ng-click="setMission()">
+            Set Mission
+        </button>
+
     </ion-list>
   </ion-content>
 </ion-view>
