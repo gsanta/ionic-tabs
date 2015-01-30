@@ -13,3 +13,11 @@
 	font-size: 8pt;
 	float: right;
 }
+
+.google-maps {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 300px;
+}

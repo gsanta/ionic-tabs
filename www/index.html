@@ -17,6 +17,7 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
     <!-- your app's js -->
     <script src="js/build.js"></script>
   </head>
@@ -35,32 +36,5 @@
     -->
 
     <ion-nav-view></ion-nav-view>
-    <script>
-      
-
-      document.addEventListener('deviceready', function () {
-        console.log("device is ready")
-
-        window.testLocalNoti = function() {
-          localNotification.add(103, {
-            seconds: 5,
-            message: "This is an example",
-            badge: 1});         
-        }
-
-        // console.log(object window.plugin.notification.local)
-        // window.plugin.notification.local.hasPermission(function (granted) {
-        //     console.log('Permission has been granted: ' + granted);
-
-        //     window.plugin.notification.local.add({
-        //         id:         "123456",  // A unique id of the notifiction
-        //         date:       new Date((new Date()).getTime() + 10000),    // This expects a date object
-        //         message:    "todo notification",  // The message that is displayed
-        //         title:      "Sedcup",  // The title of the message
-        //     });
-        // });
-      }, false);
-
-    </script>
   </body>
 </html>
